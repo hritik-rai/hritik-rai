@@ -1,12 +1,15 @@
 # Pythonic Portfolio Website 🐍
 
-A modern, responsive portfolio website with a Python-inspired dark theme, built for data scientists and ML engineers.
+A modern, responsive portfolio website with a Python-inspired dark theme, built for data scientists and ML engineers. Features an interactive snake trail animation that follows your cursor!
 
 ## Features
 
 - **🎨 Pythonic Design**: Dark theme with Python blue (#3776AB) and yellow (#FFD43B) accents
 - **📱 Responsive**: Works perfectly on desktop and mobile devices
-- **⚡ Interactive**: Smooth animations, typewriter effects, and hover animations
+- **⚡ Interactive**: Snake trail cursor animation, typewriter effects, and hover animations
+- **🐍 Python Snake Animation**: Procedural snake that follows mouse cursor with realistic golden python patterns
+- **👋 Welcome Message**: Friendly greeting at the top of the page
+- **🖼️ Profile Integration**: Real profile picture display in about section
 - **🔧 Easy to Customize**: Simple configuration in JavaScript for easy updates
 - **🚀 Performance Optimized**: Fast loading with modern web technologies
 - **♿ Accessible**: Built with accessibility best practices
@@ -16,7 +19,8 @@ A modern, responsive portfolio website with a Python-inspired dark theme, built 
 - **HTML5**: Semantic markup
 - **CSS3**: Custom styles with modern features
 - **TailwindCSS**: Utility-first CSS framework via CDN
-- **JavaScript**: Vanilla JS for interactivity
+- **JavaScript**: Vanilla JS for interactivity and snake trail animation
+- **HTML5 Canvas**: For procedural snake trail animation
 - **Google Fonts**: Inter and JetBrains Mono fonts
 
 ## Quick Start
@@ -73,21 +77,15 @@ projects: [
 ]
 ```
 
-### 4. Blog Posts
+### 4. Snake Trail Animation
 
-Edit the `blogPosts` array in `script.js` (around line 55):
+Customize the snake animation in `snake-trail.js`:
 
 ```javascript
-blogPosts: [
-    {
-        title: "Your Blog Post Title",
-        date: "2024-01-15",
-        excerpt: "# Code snippet preview\n\ndef your_function():\n    pass",
-        readTime: "5 min read",
-        tags: ["Tag1", "Tag2", "Tag3"]
-    },
-    // Add more blog posts...
-]
+// Adjust snake properties
+const snakeSpeed = 0.02;  // Movement speed
+const segmentCount = 15;  // Number of body segments
+const colors = ["#D4AF37", "#B8860B", "#DAA520"]; // Golden python colors
 ```
 
 ### 5. Contact Information
@@ -95,29 +93,27 @@ blogPosts: [
 Update your social links in the `setupEventListeners` function (around line 105):
 
 ```javascript
-// Replace the alert placeholders with actual links
+// Replace with your actual social media links
 if (text.includes('LinkedIn')) {
-    window.open('https://linkedin.com/in/your-profile', '_blank');
+    window.open('https://www.linkedin.com/in/hritik-rai-', '_blank');
 } else if (text.includes('GitHub')) {
-    window.open('https://github.com/your-username', '_blank');
+    window.open('https://github.com/Hritikrai55', '_blank');
 } else if (text.includes('Email')) {
-    window.location.href = 'mailto:your.email@domain.com';
+    window.open('mailto:hritikrai55@gmail.com', '_blank');
 }
 ```
 
 ### 6. Profile Image
 
-Replace the placeholder in the About section:
+Replace the profile image in the About section:
 
-**Option A: Use an image file**
 ```html
-<!-- In index.html, replace the placeholder div with: -->
-<img src="your-profile-photo.jpg" alt="Hritik Rai" 
-     class="w-48 h-48 rounded-full mx-auto mb-6 object-cover">
+<!-- In index.html, update the image path: -->
+<img src="pictures/profile.jpg" alt="Your Name" 
+     class="w-full h-full object-cover">
 ```
 
-**Option B: Keep the initials** (already implemented)
-- Just update the initials in the existing div
+Place your profile image in the `pictures/` directory.
 
 ### 7. Meta Tags and SEO
 
@@ -174,6 +170,9 @@ pythonic-website/
 ├── index.html          # Main HTML file
 ├── styles.css          # Custom CSS styles
 ├── script.js           # JavaScript functionality
+├── snake-trail.js      # Snake trail animation
+├── pictures/
+│   └── profile.jpg     # Profile picture
 └── README.md           # This file
 ```
 
@@ -267,4 +266,12 @@ This project is open source and available under the [MIT License](LICENSE).
 - Test in different browsers
 - Validate HTML/CSS using online validators
 
+## Live Demo
+
+🌐 **[View Live Portfolio](https://github.com/hritik-rai/hritik-rai)** 
+
+---
+
 **Built with ❤️ and Python aesthetics by Hritik Rai**
+
+*© Made with ❤️ by Hritik Rai.*

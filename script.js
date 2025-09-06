@@ -7,15 +7,14 @@ const config = {
     aboutTypewriterText: "I'm a passionate Data Scientist and Machine Learning Engineer with expertise in building intelligent systems that solve real-world problems. I specialize in developing end-to-end ML solutions, from data preprocessing and model development to deployment and MLOps.",
     typewriterSpeed: 50,
     skills: [
-        { name: "Python", version: "3.11+", description: "NumPy, Pandas, Scikit-learn, FastAPI, Streamlit", icon: "🐍" },
-        { name: "Web Scraping", version: "latest", description: "Selenium, BeautifulSoup, API Integration, ETL Pipeline", icon: "🕷️" },
-        { name: "Data Analysis", version: "latest", description: "Matplotlib, Seaborn, EDA, Statistical Analysis, PowerBI", icon: "📊" },
-        { name: "SQL", version: "ANSI", description: "PostgreSQL, SQLAlchemy, Data Warehousing, Data Modelling", icon: "💾" },
-        { name: "Machine Learning", version: "latest", description: "Supervised, Unsupervised, Data Preprocessing, Feature Engineering", icon: "🤖" },
-        { name: "Deep Learning", version: "2.13+", description: "TensorFlow, PyTorch, CNNs, RNNs, NLP, Transformers", icon: "🧠" },
-        { name: "MLOps", version: "latest", description: "Docker, Kubernetes, CI/CD, Model Monitoring, Model Deployment", icon: "⚙️" },
-        { name: "GenAI", version: "latest", description: "LLMs, LangChain, RAG, Fine-tuning", icon: "🔗" },
-        { name: "Big Data", version: "latest", description: "PySpark, Hadoop, Kafka, HDFS", icon: "🌐" }
+        { name: "Python", version: "3.11+", description: "NumPy, Pandas, Matplotlib, Seaborn, EDA", icon: "🐍", pipCommand: "python" },
+        { name: "Web Scraping", version: "latest", description: "Selenium, BeautifulSoup, API Integration, ETL Pipeline", icon: "🕷️", pipCommand: "beautifulsoup4" },
+        { name: "SQL", version: "ANSI", description: "PostgreSQL, SQLAlchemy, Data Warehousing, Data Modelling", icon: "💾", pipCommand: "sqlalchemy" },
+        { name: "Machine Learning", version: "latest", description: "Supervised, Unsupervised, Data Preprocessing, Feature Engineering", icon: "🤖", pipCommand: "scikit-learn" },
+        { name: "Deep Learning", version: "2.13+", description: "TensorFlow, PyTorch, CNNs, RNNs, NLP, Transformers", icon: "🧠", pipCommand: "tensorflow" },
+        { name: "MLOps", version: "latest", description: "Docker, Kubernetes, CI/CD, Model Monitoring, Model Deployment", icon: "⚙️", pipCommand: "mlflow" },
+        { name: "GenAI", version: "latest", description: "LLMs, LangChain, RAG, Fine-tuning", icon: "🔗", pipCommand: "langchain" },
+        { name: "Big Data", version: "latest", description: "PySpark, Hadoop, Kafka, HDFS", icon: "🌐", pipCommand: "pyspark" }
     ],
     projects: [
         {
@@ -23,7 +22,6 @@ const config = {
             description: "Built a domain-specific chatbot by fine-tuning Meta Llama-3 with LoRA on PDF documents. Integrated efficient training and deployed an interactive Gradio chat UI for real-time question answering.",
             technologies: ["Python", "Llama-3", "LoRA", "Gradio", "Fine-tuning"],
             github: "https://github.com/Hritikrai55/IndustryGPT-Specialized-LLM-Bot-Using-Pre-Trained-Models",
-            demo: "#",
             status: "Completed"
         },
         {
@@ -31,7 +29,6 @@ const config = {
             description: "Built a real-time image-based emotion detection system using CNNs and transfer learning to classify seven emotions.",
             technologies: ["Python", "CNN", "Transfer Learning", "OpenCV", "TensorFlow"],
             github: "https://github.com/Hritikrai55/DeepFER-Facial-Emotion-Recognition-Using-Deep-Learning",
-            demo: "#",
             status: "Completed"
         },
         {
@@ -39,7 +36,6 @@ const config = {
             description: "Built ML pipelines for flight price prediction, gender classification, and hotel recommendation with full MLOps deployment workflow.",
             technologies: ["Python", "MLOps", "Docker", "CI/CD", "ML Pipelines"],
             github: "https://github.com/Hritikrai55/Voyage-Analytics-Intergrating-MLOPS-in-Travel",
-            demo: "#",
             status: "Completed"
         },
         {
@@ -47,7 +43,6 @@ const config = {
             description: "Performed real-time financial analytics and predictive modeling using distributed frameworks like PySpark, Hadoop, and Hive.",
             technologies: ["PySpark", "Hadoop", "Hive", "Financial Analytics", "Big Data"],
             github: "https://github.com/Hritikrai55/Financial-Forecasting-Frontier-Distributed-ML",
-            demo: "#",
             status: "Completed"
         },
         {
@@ -55,7 +50,6 @@ const config = {
             description: "Forecasted hourly bike rental demand using regression models on the Seoul Bike Sharing dataset.",
             technologies: ["Python", "Regression", "Machine Learning", "Data Analysis"],
             github: "https://github.com/Hritikrai55/Bike_Sharing_Demand_Prediction__ML_Regression_Project",
-            demo: "#",
             status: "Completed"
         },
         {
@@ -63,7 +57,6 @@ const config = {
             description: "Optimized store performance with ML-driven sales anomaly detection, segmentation, and demand forecasting.",
             technologies: ["Python", "Anomaly Detection", "Segmentation", "Demand Forecasting"],
             github: "https://github.com/Hritikrai55/Integrated-Retail-Analytics-for-Store-Optimization",
-            demo: "#",
             status: "Completed"
         }
     ]
@@ -195,7 +188,7 @@ function generateSkillCards() {
             <h3 class="text-lg font-mono font-semibold text-python-yellow mb-2">${skill.name}</h3>
             <p class="text-sm text-gray-300 mb-4">${skill.description}</p>
             <div class="flex items-center justify-between text-xs font-mono">
-                <span class="text-neon-green">pip install ${skill.name.toLowerCase()}</span>
+                <span class="text-neon-green">pip install ${skill.pipCommand}</span>
                 <div class="w-2 h-2 bg-neon-green rounded-full animate-pulse group-hover:bg-python-yellow"></div>
             </div>
         </div>
