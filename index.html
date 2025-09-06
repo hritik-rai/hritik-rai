@@ -26,8 +26,11 @@
                     colors: {
                         'python-blue': '#3776AB',
                         'python-yellow': '#FFD43B',
-                        'github-dark': '#0d1117',
-                        'github-darker': '#010409',
+                        'python-yellow-soft': '#E6C547',
+                        'python-yellow-pale': '#F5E6A3',
+                        'python-dark': '#1e293b',
+                        'python-darker': '#0f172a',
+                        'python-darkest': '#020617',
                         'neon-green': '#39FF14'
                     },
                     fontFamily: {
@@ -48,11 +51,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-github-dark text-white font-sans overflow-x-hidden">
+<body class="bg-python-darkest text-white font-sans overflow-x-hidden">
     <!-- Procedural Snake Trail Canvas -->
     <canvas id="snake-canvas" class="fixed inset-0 w-full h-full pointer-events-none z-0"></canvas>
     <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 w-full z-50 bg-github-dark/90 backdrop-blur-md border-b border-gray-800 transition-all duration-300">
+    <nav id="navbar" class="fixed top-0 w-full z-50 bg-python-darkest/90 backdrop-blur-md border-b border-python-blue/30 transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -79,7 +82,7 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-github-darker border-t border-gray-800">
+        <div id="mobile-menu" class="md:hidden hidden bg-python-darker border-t border-python-blue/30">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#home" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-python-yellow font-mono text-sm">Home</a>
                 <a href="#about" class="mobile-nav-link block px-3 py-2 text-gray-300 hover:text-python-yellow font-mono text-sm">About</a>
@@ -175,6 +178,9 @@
         
         <div class="text-center z-10 px-4">
             <div class="mb-6">
+                <div class="text-lg md:text-xl text-python-blue font-mono mb-2">
+                    Hi, I'm
+                </div>
                 <h1 class="text-5xl md:text-7xl font-bold mb-4">
                     <span class="text-white">Hritik</span>
                     <span class="text-python-yellow">Rai</span>
@@ -221,7 +227,7 @@
             
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <!-- Profile Card -->
-                <div class="terminal-card bg-github-darker border border-gray-700 rounded-lg p-6">
+                <div class="terminal-card bg-python-darker border border-python-blue/30 rounded-lg p-6">
                     <div class="terminal-header flex items-center mb-4">
                         <div class="flex space-x-2">
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -241,7 +247,7 @@
                 
                 <!-- About Content -->
                 <div class="space-y-6">
-                    <div class="code-block bg-github-darker border border-gray-700 rounded-lg p-6">
+                    <div class="code-block bg-python-darker border border-python-blue/30 rounded-lg p-6">
                         <div class="font-mono text-sm">
                             <div class="text-python-blue mb-2"># About</div>
                             <div class="text-gray-300 leading-relaxed">
@@ -265,7 +271,7 @@
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="py-20 px-4 bg-github-darker/50">
+    <section id="skills" class="py-20 px-4 bg-python-darker/50">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16 font-mono">
                 <span class="text-python-blue">#</span> Skills $ Technologies
@@ -299,7 +305,7 @@
             
             <div class="grid md:grid-cols-2 gap-12">
                 <!-- Contact Form Terminal -->
-                <div class="terminal-container bg-github-darker border border-gray-700 rounded-lg p-6">
+                <div class="terminal-container bg-python-darker border border-python-blue/30 rounded-lg p-6">
                     <div class="terminal-header flex items-center mb-4">
                         <div class="flex space-x-2">
                             <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -309,20 +315,20 @@
                         <div class="flex-1 text-center text-gray-400 text-sm font-mono">contact.py</div>
                     </div>
                     
-                    <form class="space-y-6 font-mono text-sm">
+                    <form action="https://formspree.io/f/xdklpbny" method="POST" class="space-y-6 font-mono text-sm">
                         <div>
-                            <label class="text-python-blue">name = </label>
-                            <input type="text" class="bg-transparent border-b border-gray-600 text-white focus:border-python-yellow outline-none w-full pb-1" placeholder='"Your Name"'>
+                            <label class="text-python-yellow-soft">name = </label>
+                            <input type="text" name="name" required class="bg-transparent border-b border-python-yellow-soft/40 text-white focus:border-python-yellow-soft outline-none w-full pb-1" placeholder='"Your Name"'>
                         </div>
                         <div>
-                            <label class="text-python-blue">email = </label>
-                            <input type="email" class="bg-transparent border-b border-gray-600 text-white focus:border-python-yellow outline-none w-full pb-1" placeholder='"your.email@domain.com"'>
+                            <label class="text-python-yellow-soft">email = </label>
+                            <input type="email" name="email" required class="bg-transparent border-b border-python-yellow-soft/40 text-white focus:border-python-yellow-soft outline-none w-full pb-1" placeholder='"your.email@domain.com"'>
                         </div>
                         <div>
-                            <label class="text-python-blue">message = </label>
-                            <textarea rows="4" class="bg-transparent border border-gray-600 rounded text-white focus:border-python-yellow outline-none w-full p-2 mt-2" placeholder='"""Your message here"""'></textarea>
+                            <label class="text-python-yellow-soft">message = </label>
+                            <textarea rows="4" name="message" required class="bg-transparent border border-python-yellow-soft/40 rounded text-white focus:border-python-yellow-soft outline-none w-full p-2 mt-2" placeholder='"""Your message here"""'></textarea>
                         </div>
-                        <button type="submit" class="bg-python-blue hover:bg-python-blue/80 text-white px-6 py-3 rounded transition-colors font-mono">
+                        <button type="submit" class="bg-python-yellow-soft hover:bg-python-yellow text-black px-6 py-3 rounded transition-colors font-mono font-semibold">
                             send_message()
                         </button>
                     </form>
@@ -334,26 +340,26 @@
                         <h3 class="text-xl font-mono text-python-yellow mb-6">Connect with me</h3>
                         
                         <div class="space-y-4">
-                            <div class="social-link flex items-center space-x-4 p-4 bg-github-darker border border-gray-700 rounded-lg hover:border-python-yellow transition-colors">
+                            <a href="https://www.linkedin.com/in/hritik-rai-" target="_blank" class="social-link flex items-center space-x-4 p-4 bg-python-darker border border-python-blue/30 rounded-lg hover:border-python-yellow transition-colors">
                                 <div class="w-8 h-8 bg-python-blue rounded flex items-center justify-center">
                                     <span class="text-white text-sm font-bold">in</span>
                                 </div>
                                 <span class="font-mono text-gray-300">LinkedIn: hritik-rai-</span>
-                            </div>
+                            </a>
                             
-                            <div class="social-link flex items-center space-x-4 p-4 bg-github-darker border border-gray-700 rounded-lg hover:border-python-yellow transition-colors">
+                            <a href="https://github.com/Hritikrai55" target="_blank" class="social-link flex items-center space-x-4 p-4 bg-python-darker border border-python-blue/30 rounded-lg hover:border-python-yellow transition-colors">
                                 <div class="w-8 h-8 bg-gray-800 rounded flex items-center justify-center">
                                     <span class="text-white text-sm font-bold">gh</span>
                                 </div>
                                 <span class="font-mono text-gray-300">GitHub: Hritikrai55</span>
-                            </div>
+                            </a>
                             
-                            <div class="social-link flex items-center space-x-4 p-4 bg-github-darker border border-gray-700 rounded-lg hover:border-python-yellow transition-colors">
+                            <a href="mailto:hritikrai55@gmail.com" class="social-link flex items-center space-x-4 p-4 bg-python-darker border border-python-blue/30 rounded-lg hover:border-python-yellow transition-colors">
                                 <div class="w-8 h-8 bg-red-600 rounded flex items-center justify-center">
                                     <span class="text-white text-sm font-bold">@</span>
                                 </div>
                                 <span class="font-mono text-gray-300">Email: hritikrai55@gmail.com</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -362,7 +368,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-github-darker border-t border-gray-800 py-8 px-4">
+    <footer class="bg-python-darker border-t border-python-blue/30 py-8 px-4">
         <div class="max-w-6xl mx-auto text-center">
             <p class="text-gray-400 font-mono">
                 © Made with ❤️ by Hritik Rai.

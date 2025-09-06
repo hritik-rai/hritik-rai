@@ -11,7 +11,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #0d1117;
+    background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -116,7 +116,7 @@ html {
     left: -2px;
     right: -2px;
     bottom: -2px;
-    background: linear-gradient(45deg, #3776AB, #4A90A4, #3776AB);
+    background: #000000;
     border-radius: inherit;
     z-index: -1;
     opacity: 0;
@@ -214,7 +214,7 @@ button:hover, .btn:hover {
 /* Package card styling */
 .package-card {
     background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-    border: 1px solid #374151;
+    border: 1px solid rgba(55, 118, 171, 0.3);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -237,18 +237,18 @@ button:hover, .btn:hover {
 
 /* Project card GitHub-style */
 .project-card {
-    background: #161b22;
-    border: 1px solid #30363d;
+    background: #0f172a;
+    border: 1px solid rgba(55, 118, 171, 0.3);
 }
 
 .project-card:hover {
-    border-color: #3776AB;
+    border-color: #FFD43B;
 }
 
 /* Blog card code-style */
 .blog-card {
-    background: #0d1117;
-    border: 1px solid #21262d;
+    background: #020617;
+    border: 1px solid rgba(55, 118, 171, 0.3);
     font-family: 'JetBrains Mono', monospace;
 }
 

@@ -16,14 +16,14 @@ class SnakeTrail {
         this.IDLE_THRESHOLD = 500;           // Longer before curling starts
         this.SCALE_PATTERN_SIZE = 4;         // Size of scale patterns
         
-        // Golden Python Colors 
-        this.SNAKE_PRIMARY = '#D4A574';      // Golden brown base
-        this.SNAKE_SECONDARY = '#B8956A';    // Darker golden brown
-        this.SNAKE_ACCENT = '#8B6914';       // Dark brown accents
-        this.EYE_COLOR = '#FFD700';          // Golden eyes
-        this.BELLY_COLOR = '#F5DEB3';        // Light cream belly
-        this.SPOT_COLOR = '#8B4513';         // Dark brown spots
-        this.SPOT_HIGHLIGHT = '#DEB887';     // Light spot highlights
+        // Python Yellow Theme Colors 
+        this.SNAKE_PRIMARY = '#FFD43B';      // Python yellow base
+        this.SNAKE_SECONDARY = '#E6C547';    // Soft python yellow
+        this.SNAKE_ACCENT = '#D4AF37';       // Gold accent
+        this.EYE_COLOR = '#FFD43B';          // Python yellow eyes
+        this.BELLY_COLOR = '#F5E6A3';        // Pale python yellow belly
+        this.SPOT_COLOR = '#B8860B';         // Dark yellow spots
+        this.SPOT_HIGHLIGHT = '#F0E68C';     // Light yellow highlights
         this.BACKGROUND_COLOR = '#0d1117';
         
         // ===== INTERNAL PROPERTIES =====
@@ -269,8 +269,8 @@ class SnakeTrail {
             );
             
             const glowStrength = 0.2 + Math.sin(this.breathingPhase * 1.5) * 0.05;
-            gradient.addColorStop(0, `rgba(212, 165, 116, ${segment.opacity * glowStrength * intensity})`);
-            gradient.addColorStop(0.7, `rgba(184, 149, 106, ${segment.opacity * 0.1})`);
+            gradient.addColorStop(0, `rgba(255, 212, 59, ${segment.opacity * glowStrength * intensity})`);
+            gradient.addColorStop(0.7, `rgba(230, 197, 71, ${segment.opacity * 0.1})`);
             gradient.addColorStop(1, 'rgba(0, 0, 0, 0)');
             
             this.ctx.fillStyle = gradient;
