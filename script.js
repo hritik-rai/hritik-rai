@@ -377,6 +377,7 @@ if ('IntersectionObserver' in window) {
         animatableElements.forEach(el => {
             observer.observe(el);
         });
+        
     });
 }
 
@@ -395,3 +396,4 @@ Built with ❤️ and lots of ☕
 `, 'color: #3776AB; font-weight: bold;');
 
 console.log('%cHey there, fellow developer! 👋\nInterested in the code? Check out the repository!', 'color: #FFD43B; font-size: 14px;');
+
